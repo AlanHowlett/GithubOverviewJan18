@@ -6,10 +6,12 @@ on:
 jobs:
   firstjob:
     runs-on: github-hosted
-    steps:
+    steps: 
     - name: firstJob script
       shell: bash
       run: echo Hello World! This is the first job
+    - name: checkout
+      uses: action/checkout@v3
       
 secondjob:
   runs-on: ubuntu-latest
